@@ -15,9 +15,6 @@ startup:startup.o
 startup.o:startup.S
 	$(AS) -mlittle-endian -o startup.o startup.S
 
-startup.S:startup.c
-	$(GCC) -S startup.c -o startup.S
-
 clean:
-	rm startup.S startup.o startup u-boot.bin
+	rm startup.o startup u-boot.bin
 
